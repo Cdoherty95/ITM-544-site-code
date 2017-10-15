@@ -1,15 +1,3 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Chris
- * Date: 10/5/2017
- * Time: 10:42 AM
- */
-
-include 'GetImg.php';
-$ImgRepo = new ImgProj();
-$ImgList = $ImgRepo->getAllImg();
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,7 +6,7 @@ $ImgList = $ImgRepo->getAllImg();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Freebie: 4 Bootstrap Gallery Templates</title>
+    <title>ITM 544 Cloud Computing</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
@@ -31,31 +19,22 @@ $ImgList = $ImgRepo->getAllImg();
 
 <div class="container gallery-container">
 
-    <h1>Bootstrap 3 Gallery</h1>
+    <h1>Welcome To Chris Doherty Project 1</h1>
 
-    <p class="page-description text-center">Grid Layout With Zoom Effect</p>
+    <p class="page-description text-center">Choose a destination</p>
 
-    <div class="tz-gallery">
-        <?php
-
-        $i = 0;
-        foreach ($ImgList as $currentnote) {
-            print '<div class="item">';
-            print '<p>ID: ' . $ImgList[$i][0] . '</p>';
-            print '<p>name: ' . $ImgList[$i][1] . '</p>';
-            print '<p>url: ' . $ImgList[$i][2] . '</p>';
-            print '</div>';
-            $i++;
-
-        }
-        ?>
-
+    <div class="indxnav">
+    <a href="gallery.php"><button type="button" class="btn first">Gallary Page</button></a>
+    <a href="upload.php"><button type="button" class="btn second" >Upload Images</button></a>
     </div>
+
 </div>
 
+<!--
+I dont think i need this
 <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
 <script>
     baguetteBox.run('.tz-gallery');
-</script>
+</script> -->
 </body>
 </html>

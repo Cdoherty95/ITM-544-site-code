@@ -8,6 +8,7 @@
 include 'GetImg.php';
 $ImgRepo = new ImgProj();
 $ImgList = $ImgRepo->getAllImg();
+require 'vendor/autoload.php';
 ?>
 
 
