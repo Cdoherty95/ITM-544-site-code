@@ -8,9 +8,11 @@ body {
 .container.gallery-container {
     background-color: #fff;
     color: #35373a;
-    min-height: 100vh;
+    min-height: 40em;
     border-radius: 20px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06);
+    width: 75%;
+    margin: auto;
 }
 
 .gallery-container h1 {
@@ -61,6 +63,21 @@ body {
     order: 2;
     margin-left: 3%;
 }
+<<<<<<< HEAD
+=======
+/*flex container for form*/
+.upload_form{
+    width: 75%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex; /* or inline-flex */
+    flex-direction: row;
+    justify-content: center;
+}
+.form_input{
+    margin: 1em 1em 1em 1em;
+}
+>>>>>>> f32a50e838a87fb1e2bdfd1f97d9974df428da0c
 /*cs to format button on main page */
 .btn {
     background: #3498db;
