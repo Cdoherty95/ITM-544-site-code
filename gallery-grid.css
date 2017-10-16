@@ -52,7 +52,48 @@ body {
 .baguetteBox-button {
     background-color: transparent !important;
 }
-
+/* css flex for index button */
+.first {
+    order: 1;
+    margin-right: 3%;
+}
+.second {
+    order: 2;
+    margin-left: 3%;
+}
+/*cs to format button on main page */
+.btn {
+    background: #3498db;
+    background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+    background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+    background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+    background-image: -o-linear-gradient(top, #3498db, #2980b9);
+    background-image: linear-gradient(to bottom, #3498db, #2980b9);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    text-shadow: 4px -2px 3px #666666;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 30px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+.btn:hover {
+     background: #3cb0fd;
+     background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+     background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+     background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+     background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+     background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+     text-decoration: none;
+ }
+/*index page flex container*/
+.indxnav{
+    display: flex; /* or inline-flex */
+    flex-direction: row;
+    justify-content: center;
+}
 
 @media(max-width: 768px) {
     body {

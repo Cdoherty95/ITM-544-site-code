@@ -5,6 +5,7 @@
  * Date: 10/5/2017
  * Time: 10:49 AM
  */
+require 'vendor/autoload.php';
 
 class ImgProj
 {
