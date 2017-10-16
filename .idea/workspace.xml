@@ -33,27 +33,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="formaction.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/formaction.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="46" column="3" selection-start-line="46" selection-start-column="3" selection-end-line="46" selection-end-column="3" />
-              <folding>
-                <element signature="e#6#120#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="testing.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="testing.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testing.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="632">
-              <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+            <state relative-caret-position="2282">
+              <caret line="124" column="1" selection-start-line="124" selection-start-column="1" selection-end-line="124" selection-end-column="1" />
               <folding>
-                <element signature="e#6#89#0#PHP" expanded="true" />
-                <marker date="1508131108541" expanded="true" signature="580:593" ph="CREATE TABLE... tutorials_tbl" />
-                <marker date="1508131108541" expanded="true" signature="580:805" ph="CREATE TABLE... records" />
+                <marker date="1508173441361" expanded="true" signature="9:87" ph=" Created by PhpStorm. ..." />
+                <marker date="1508173441361" expanded="true" signature="2640:2671" ph="..." />
+                <marker date="1508173441361" expanded="true" signature="2640:2679" ph="..." />
               </folding>
             </state>
           </provider>
@@ -87,6 +75,28 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="264">
               <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="formaction.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/formaction.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="46" column="3" selection-start-line="46" selection-start-column="3" selection-end-line="46" selection-end-column="3" />
+              <folding>
+                <element signature="e#6#120#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="616">
+              <caret line="28" column="10" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -236,12 +246,12 @@
       <workItem from="1508103013334" duration="2053000" />
       <workItem from="1508105757789" duration="755000" />
       <workItem from="1508107940001" duration="235000" />
-      <workItem from="1508115315768" duration="4852000" />
+      <workItem from="1508115315768" duration="5612000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7895000" />
+    <option name="totallyTimeSpent" value="8655000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1932" height="1038" extended-state="0" />
@@ -332,14 +342,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="28" column="10" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gallery-grid.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="572">
@@ -348,19 +350,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://S:/OneDrive/Documents/IIT/4th year/Fall 2017/dbcreate.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gallery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
-          <folding />
+        <state relative-caret-position="418">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <marker date="1508119269818" expanded="true" signature="204:338" ph="CREATE TABLE... comments" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -374,22 +370,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/formaction.php">
+    <entry file="file://$PROJECT_DIR$/testing.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="46" column="3" selection-start-line="46" selection-start-column="3" selection-end-line="46" selection-end-column="3" />
+        <state relative-caret-position="2282">
+          <caret line="124" column="1" selection-start-line="124" selection-start-column="1" selection-end-line="124" selection-end-column="1" />
           <folding>
-            <element signature="e#6#120#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://S:/OneDrive/Documents/IIT/4th year/Fall 2017/dbcreate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <marker date="1508119269818" expanded="true" signature="204:338" ph="CREATE TABLE... comments" />
+            <marker date="1508173441361" expanded="true" signature="9:87" ph=" Created by PhpStorm. ..." />
+            <marker date="1508173441361" expanded="true" signature="2640:2671" ph="..." />
+            <marker date="1508173441361" expanded="true" signature="2640:2679" ph="..." />
           </folding>
         </state>
       </provider>
@@ -405,15 +393,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testing.php">
+    <entry file="file://$PROJECT_DIR$/gallery.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="632">
-          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+        <state relative-caret-position="616">
+          <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/formaction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="46" column="3" selection-start-line="46" selection-start-column="3" selection-end-line="46" selection-end-column="3" />
           <folding>
-            <element signature="e#6#89#0#PHP" expanded="true" />
-            <marker date="1508131108541" expanded="true" signature="580:593" ph="CREATE TABLE... tutorials_tbl" />
-            <marker date="1508131108541" expanded="true" signature="580:805" ph="CREATE TABLE... records" />
+            <element signature="e#6#120#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="28" column="10" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -63,8 +63,6 @@ body {
     order: 2;
     margin-left: 3%;
 }
-<<<<<<< HEAD
-=======
 /*flex container for form*/
 .upload_form{
     width: 75%;
@@ -77,7 +75,6 @@ body {
 .form_input{
     margin: 1em 1em 1em 1em;
 }
->>>>>>> f32a50e838a87fb1e2bdfd1f97d9974df428da0c
 /*cs to format button on main page */
 .btn {
     background: #3498db;

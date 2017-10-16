@@ -4,14 +4,6 @@
  * User: Chris
  * Date: 10/5/2017
  * Time: 12:33 PM
-<<<<<<< HEAD
- */
-require 'vendor/autoload.php';
-    $target_dir = "uploads/";
-    $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-    $uploadOk = 1;
-    $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
-=======
 
 require 'vendor/autoload.php';
 */
@@ -33,7 +25,6 @@ $uploadOk = 1;
 //get files type (jpg, png) ect
 $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
 
->>>>>>> f32a50e838a87fb1e2bdfd1f97d9974df428da0c
 // Check if image file is a actual image or fake image
 if (isset($_POST["submit"])) {
     //boolean to see if file returns image size
