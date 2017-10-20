@@ -31,7 +31,7 @@ $ImgList = $ImgRepo->getAllImg();
     <form action="formaction.php" method="post" enctype="multipart/form-data">
         <div class="form_input">
             <label for="mail">E-mail:</label>
-            <input type="email" id="mail" name="user_mail" placeholder="test@test.com">
+            <input type="email" id="mail" name="email" placeholder="test@test.com">
         </div>
         <div class="form_input">
             <label for="phone">Phone Number:</label>

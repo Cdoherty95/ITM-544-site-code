@@ -15,6 +15,43 @@
 
 
 </head>
+<?php
+/*creds*/
+$servername = "rds.c15xslmyk9xr.us-east-2.rds.amazonaws.com";
+$username = "admin";
+$password = "admin123";
+$dbname = "rds";
+
+/*open connection*/
+$mysqli = new mysqli($servername, $username, $password, $dbname);
+
+/* check connection */
+if (mysqli_connect_errno()) {
+    printf("Connect failed: %s\n", mysqli_connect_error());
+    exit();
+}
+/*SQL Create teble statement*/
+$sql = "CREATE TABLE IF NOT EXISTS records
+(
+id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+email VARCHAR(32),
+phone VARCHAR(32),
+rurl VARCHAR(32),
+furl VARCHAR(32),
+status INT(1),
+receipt BIGINT
+)";
+/*run SQL*/
+if ($mysqli->query($sql) === TRUE) {
+    echo "Table created successfully";
+} else {
+    echo "Error creating database: " . $mysqli->error;
+}
+
+/* close connection */
+$mysqli->close();
+?>
+
 <body>
 
 <div class="container gallery-container">
@@ -30,11 +67,5 @@
 
 </div>
 
-<!--
-I dont think i need this
-<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
-<script>
-    baguetteBox.run('.tz-gallery');
-</script> -->
 </body>
 </html>

@@ -11,12 +11,12 @@ require 'vendor/autoload.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // collect value of input field
-    $name = $_POST['user_mail'];
-    $name = $_POST['phone'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
     $file = $_POST['image'];
 }
-//local directory
-$target_dir = "uploads/";
+/*local directory
+//$target_dir = "uploads/";
 //
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 //sets a variable for success
@@ -50,7 +50,47 @@ if (isset($_POST["submit"])) {
     //this will need to be replaced with call to s3 and my sqldb
     move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);
 }
+*/
 
+/*open connection*/
+$servername = "rds.c15xslmyk9xr.us-east-2.rds.amazonaws.com";
+$username = "admin";
+$password = "admin123";
+$dbname = "rds";
+
+$mysqli = new mysqli($servername, $username, $password, $dbname);
+
+/* check connection */
+if (mysqli_connect_errno()) {
+    printf("Connect failed: %s\n", mysqli_connect_error());
+    exit();
+}
+
+/*prepared statement*/
+$stmt = $mysqli->prepare("INSERT INTO records (email, phone, rurl, furl, status, receipt) VALUES (?,?,?,?,?,?)");
+
+//bind parameters to prepared stmt
+$stmt->bind_param("ssssii", $email, $phone, $rurl, $furl, $status, $receipt);
+
+//var used for testing
+$email = "fd123@g4.com";
+$phone = "h778889999";
+$rurl = "cdsdgfdsg.com";
+$furl = "asdfasdfg.com";
+$status = "1";
+$receipt = random_int(1, 999999);
+
+//execute the prepared stmt
+$stmt->execute();
+
+/*for testing purpoes # of rows affected*/
+printf("%d Row inserted.\n", $stmt->affected_rows);
+
+/* close statement and connection */
+$stmt->close();
+$conn->close();
+
+/*
 //Need to put redirect to gallery page here with get methods
 if ($uploadOk == 1) {
     $result = '<div class="alert alert-success">Image Has Been Uploaded</div>';
@@ -60,6 +100,6 @@ if ($uploadOk == 1) {
 //results not echoing
 
 echo $result;
-
+*/
 ?>
 
