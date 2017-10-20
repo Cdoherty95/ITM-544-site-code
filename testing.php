@@ -36,11 +36,163 @@ require 'vendor/autoload.php';
 use Aws\S3\S3Client;
 use Aws\Exception\AwsException;
 
+echo getenv('HOME');
+
+$servername = "rds.c15xslmyk9xr.us-east-2.rds.amazonaws.com";
+$username = "admin";
+$password = "admin123";
+$dbname = "rds";
+
+$conn = new mysqli($servername,$username,$password,$dbname);
+
+//Check Connection
+if ($conn->connect_errno) {
+    printf("Connect failed: %s\n", $conn->connect_error);
+    exit();
+}
+
+$conn->query("DROP TABLE records");
+
+
+//SQL Statement to create table
+$sql = "CREATE TABLE records
+(
+id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+email VARCHAR(32),
+phone VARCHAR(32),
+rurl VARCHAR(32),
+furl VARCHAR(32),
+status INT(1),
+receipt BIGINT
+)";
+
+//Creates the table if not tells why it cannot
+if($conn->query($sql)===TRUE){
+    echo "Created table";
+}else{
+    echo "failed". $conn->error;;
+}
+
+/* Prepared statement, stage 1: prepare */
+if (!($stmt = $conn->prepare("INSERT INTO records (id, email, phone,
+rurl, furl, status, receipt) VALUES (NULL,?,?,?,?,?,?)"))) {
+    echo "Prepare failed: (" . $conn->errno . ") " . $conn->error;
+}
+
+$conn->close();
+
+/*open connection*/
+$servername = "rds.c15xslmyk9xr.us-east-2.rds.amazonaws.com";
+$username = "admin";
+$password = "admin123";
+$dbname = "rds";
+
+$conn = new mysqli($servername,$username,$password,$dbname);
+
+//Check Connection
+if ($conn->connect_errno) {
+    printf("Connect failed: %s\n", $conn->connect_error);
+    exit();
+}
+
+/* Var for testing */
+$email = "test1@gum.com";
+$phone = "778589";
+$raw_url = "aws-raw.com";
+$fin_url = "aws-fin.com";
+$status = "1";
+$receipt = "45454545454545";
+
+/* Binding Values Passed from Post*/
+$stmt->bind_param("ssssii", $email, $phone, $raw_url,
+    $fin_url, $status, $receipt);
+
+//execute prepared stmt
+$stmt->execute();
+
+//display # of rows inserted
+printf("%d Row inserted.\n", $stmt->affected_rows);
+
+/* close statement and connection */
+$stmt->close();
+$conn->close();
+
+/*open connection*/
+$servername = "rds.c15xslmyk9xr.us-east-2.rds.amazonaws.com";
+$username = "admin";
+$password = "admin123";
+$dbname = "rds";
+
+$conn1 = new mysqli($servername,$username,$password,$dbname);
+
+//Check Connection
+if ($conn1->connect_errno) {
+    printf("Connect failed: %s\n", $conn1->connect_error);
+    exit();
+}
+
+//SQL to select all
+$select = "SELECT * FROM records";
+$result = mysqli_query($conn1, $select);
+var_dump($result);
+/*
+$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+printf ("%s (%s)\n", $row["id"], $row["email"]);
+mysqli_free_result($result);
+mysqli_close($conn1);
+*/
+    /*  $id = $row['id'];
+      $email = $row['email'];
+      $phone =
+      $row["id"], $row["email"], $row["phone"],
+              $row["rurl"], $row["furl"], $row["status"], $row["recpt"])
+  /*
+  if ($results = $conn->query($select)){
+      var_dump($results);
+      echo '</br>';
+      while ($row = $results->fetch_assoc()) {
+          printf("%s (%s,%s)\n", $row["id"], $row["email"], $row["phone"],
+              $row["rurl"], $row["furl"], $row["status"], $row["receipt"]);
+      }
+      /* free result set */
+    //$result->close();
+
+
+echo '</br>';
+/*
+$result = $conn->prepare('SELECT * FROM records');
+$result->execute();
+$data = $result->fetchAll();
+$i=0;
+$dataArray = array();
+foreach ($data as $row){
+    $dataArray[$i][0] = $row['id'];
+    $dataArray[$i][1] = $row['email'];
+    $dataArray[$i][2] = $row['phone'];
+    $dataArray[$i][3] = $row['rurl'];
+    $dataArray[$i][4] = $row['furl'];
+    $dataArray[$i][5] = $row['status'];
+    $dataArray[$i][6] = $row['receipt'];
+    $i++;
+}
+
+$i=0;
+foreach ($dataArray as $currentnote){
+    for ($x = 1; $x <= 7;  $x++) {
+        print '<p>' . $dataArray[$i][$x] . '</p>';
+    }
+    $i++;
+
+}
+*/
+
+/*
+
 $s3 = new Aws\S3\S3Client([
     'version' => 'latest',
     'region'  => 'us-east-2'
 ]);
-echo getenv('HOME');
+
 
 /*
 
