@@ -54,9 +54,9 @@ if (isset($_POST["submit"])) {
 
 /*open connection*/
 $servername = "rds.c15xslmyk9xr.us-east-2.rds.amazonaws.com";
-$username = "admin";
-$password = "admin123";
-$dbname = "rds";
+$username = "itm544class";
+$password = "itm544pass";
+$dbname = "itm544dbformp1";
 
 $mysqli = new mysqli($servername, $username, $password, $dbname);
 

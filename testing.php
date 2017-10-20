@@ -13,9 +13,9 @@
  * <body>
  * <?php
  * $dbhost = 'rds.c15xslmyk9xr.us-east-2.rds.amazonaws.com';
- * $dbuser = 'admin';
- * $dbpass = 'admin123';
- * $dbname = 'rds';
+ * $username = "itm544class";
+$password = "itm544pass";
+$dbname = "itm544dbformp1";
  *
  * $conn = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
  * if (!$link) {
