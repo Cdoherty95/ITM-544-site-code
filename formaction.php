@@ -88,7 +88,7 @@ printf("%d Row inserted.\n", $stmt->affected_rows);
 
 /* close statement and connection */
 $stmt->close();
-$conn->close();
+$mysqli->close();
 
 /*
 //Need to put redirect to gallery page here with get methods

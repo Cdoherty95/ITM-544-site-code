@@ -6,9 +6,6 @@
  * Time: 10:42 AM
  */
 
-include 'GetImg.php';
-$ImgRepo = new ImgProj();
-$ImgList = $ImgRepo->getAllImg();
 require 'vendor/autoload.php';
 ?>
 <!DOCTYPE html>
@@ -89,6 +86,12 @@ require 'vendor/autoload.php';
 
 </div>
 <?php
+/*creds*/
+$servername = "rds.c15xslmyk9xr.us-east-2.rds.amazonaws.com";
+$username = "admin";
+$password = "admin123";
+$dbname = "rds";
+
 $mysqli = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
