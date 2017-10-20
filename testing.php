@@ -36,6 +36,21 @@ require 'vendor/autoload.php';
 use Aws\S3\S3Client;
 use Aws\Exception\AwsException;
 
+//Create a S3Client
+$s3Client = new S3Client([
+    'version' => 'latest',
+    'region'  => 'us-east-2'
+]);
+
+//Listing all S3 Bucket
+$buckets = $s3Client->listBuckets();
+foreach ($buckets['Buckets'] as $bucket) {
+    echo $bucket['Name'] . "\n";
+}
+
+/*
+ * For gallery.php
+
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -88,7 +103,7 @@ if ($result = mysqli_query($mysqli, $sql)) {
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($mysqli);
 }
 mysqli_close($mysqli);
-
+*/
 ?>
 
 
