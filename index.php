@@ -41,7 +41,10 @@ furl VARCHAR(32),
 status INT(1),
 receipt BIGINT
 )";
-/*run SQL*/
+
+/***********NEEDS TO BE REMOVED
+ * run SQL
+ */
 if ($mysqli->query($sql) === TRUE) {
     echo "Table created successfully";
 } else {
@@ -61,8 +64,12 @@ $mysqli->close();
     <p class="page-description text-center">Choose a destination</p>
 
     <div class="indxnav">
-    <a href="gallery.php"><button type="button" class="btn first">Gallary Page</button></a>
-    <a href="upload.php"><button type="button" class="btn second">Upload Images</button></a>
+        <a href="gallery.php">
+            <button type="button" class="btn first">Gallary Page</button>
+        </a>
+        <a href="upload.php">
+            <button type="button" class="btn second">Upload Images</button>
+        </a>
     </div>
 
 </div>

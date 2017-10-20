@@ -28,21 +28,21 @@ $ImgList = $ImgRepo->getAllImg();
     <h1>Upload Images</h1>
 
     <div class="upload_form">
-    <form action="formaction.php" method="post" enctype="multipart/form-data">
-        <div class="form_input">
-            <label for="mail">E-mail:</label>
-            <input type="email" id="mail" name="email" placeholder="test@test.com">
-        </div>
-        <div class="form_input">
-            <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" placeholder="3125895689">
-        </div>
-        <div class="form_input">
-            <label for="msg">Select image to upload:</label>
-            <input type="file" name="image" id="image">
-        </div>
-        <input class="form_input" type="submit" value="Upload Image" name="submit">
-    </form>
+        <form action="formaction.php" method="post" enctype="multipart/form-data">
+            <div class="form_input">
+                <label for="mail">E-mail:</label>
+                <input type="email" id="mail" name="email" placeholder="test@test.com">
+            </div>
+            <div class="form_input">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="3125895689">
+            </div>
+            <div class="form_input">
+                <label for="msg">Select image to upload:</label>
+                <input type="file" name="image" id="image">
+            </div>
+            <input class="form_input" type="submit" value="Upload Image" name="submit">
+        </form>
 
     </div>
 </div>
