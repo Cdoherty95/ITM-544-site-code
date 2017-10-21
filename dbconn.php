@@ -33,6 +33,7 @@ class dbconnection
         }elseif (in_array("itm544s3post", $bucketnames)){
             //post is present pre is not
             $s3Client->createBucket(array('Bucket' => 'itm544s3pre'));
+            echo "bucket itm544s3post was created";
         }else{
             //creates both buckets if neither exist
             $s3Client->createBucket(array('Bucket' => 'itm544s3pre'));
