@@ -52,7 +52,7 @@ if (isset($_POST["submit"])) {
 }
 */
 
-/*open connection*/
+/*open connection SHOULDNT NEED
 $servername = "rds.c15xslmyk9xr.us-east-2.rds.amazonaws.com";
 $username = "admin";
 $password = "admin123";
@@ -60,11 +60,15 @@ $dbname = "rds";
 
 $mysqli = new mysqli($servername, $username, $password, $dbname);
 
-/* check connection */
+/* check connection SHULDNT NEED
 if (mysqli_connect_errno()) {
     printf("Connect failed: %s\n", mysqli_connect_error());
     exit();
 }
+*/
+require_once 'dbconn.php';
+$dbconnection = new dbconnection();
+$mysqi = $dbconnection->openconnection();
 
 /*prepared statement*/
 $stmt = $mysqli->prepare("INSERT INTO records (email, phone, rurl, furl, status, receipt) VALUES (?,?,?,?,?,?)");

@@ -1,15 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Chris
- * Date: 10/5/2017
- * Time: 12:28 PM
- */
-/*
-include 'GetImg.php';
-$ImgRepo = new ImgProj();
-$ImgList = $ImgRepo->getAllImg();
-*/
 ?>
 <!DOCTYPE html>
 <html>

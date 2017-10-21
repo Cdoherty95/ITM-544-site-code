@@ -5,10 +5,9 @@
  * Date: 10/21/2017
  * Time: 11:20 AM
  */
-require_once '1.php';
+require_once 'dbconn.php';
 
 $dbconnection = new dbconnection();
-
 $mysqi = $dbconnection->openconnection();
 
 $sql = "SELECT * FROM records";
