@@ -62,23 +62,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     $filename = $tmp_file_path;
-    $croppedfile = $tmp_file_post_path;
+    $watermarkfile = $tmp_file_post_path;
 
-    $imageSize = getimagesize($filename);
-    $currwidth = $imageSize[0];
-    $currhight = $imageSize[1];
 
-    $left = 0;
-    $top = 0;
+// Load the stamp and the photo to apply the watermark to
+    $stamp = imagecreatefrompng('watermark.png');
+    $im = imagecreatefromjpeg($filename);
 
-    $cropwidth = 700;
-    $cropheight = 400;
+// Set the margins for the stamp and get the height/width of the stamp image
+    $marge_right = 10;
+    $marge_bottom = 10;
+    $sx = imagesx($stamp);
+    $sy = imagesy($stamp);
 
-    $canvas = imagecreatetruecolor($cropwidth, $cropheight);
-    $currentimage = imagecreatefromjpeg($filename);
-    imagecopy($canvas, $currentimage, 100, 100, $left, $top, $currwidth, $currhight);
-    imagejpeg($canvas, $croppedfile, 100);
-    echo 'Image crop Successful';
+// Copy the stamp image onto our photo using the margin offsets and the photo
+// width to calculate positioning of the stamp.
+    imagecopy($im, $stamp, imagesx($im) - $sx - $marge_right, imagesy($im) - $sy - $marge_bottom, 0, 0, imagesx($stamp), imagesy($stamp));
+    imagejpeg($im, $watermarkfile, 100);
 
     try{
         $s3Client = new S3Client([

@@ -8,23 +8,22 @@
 //crop image with php gd
 
 $filename = 'S:\XAMPP\htdocs\ITM-544-site-code\files\95e2a0ea6d84fa3c8a5fe8f2c68ac241.jpg';
-$croppedfile = 'S:\XAMPP\htdocs\ITM-544-site-code\files\new1.jpg';
 
-$imageSize = getimagesize($filename);
-$currwidth = $imageSize[0];
-$currhight = $imageSize[1];
+// Load the stamp and the photo to apply the watermark to
+$stamp = imagecreatefrompng('watermark.png');
+$im = imagecreatefromjpeg($filename);
+$watermarkfile = 'S:\XAMPP\htdocs\ITM-544-site-code\files\new1.jpg';
 
-$left = 0;
-$top = 0;
+// Set the margins for the stamp and get the height/width of the stamp image
+$marge_right = 10;
+$marge_bottom = 10;
+$sx = imagesx($stamp);
+$sy = imagesy($stamp);
 
-$cropwidth = 700;
-$cropheight = 400;
+// Copy the stamp image onto our photo using the margin offsets and the photo
+// width to calculate positioning of the stamp.
+imagecopy($im, $stamp, imagesx($im) - $sx - $marge_right, imagesy($im) - $sy - $marge_bottom, 0, 0, imagesx($stamp), imagesy($stamp));
+imagejpeg($im, $watermarkfile, 100);
 
-$canvas = imagecreatetruecolor($cropwidth, $cropheight);
-$currentimage = imagecreatefromjpeg($filename);
-imagecopy($canvas, $currentimage, 100, 100, $left, $top, $currwidth, $currhight);
-imagejpeg($canvas, $croppedfile, 100);
-echo 'Image crop Successful';
-exit;
 
 ?>
