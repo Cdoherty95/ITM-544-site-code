@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $key = md5(uniqid());
     $postkey = md5(uniqid());
     $tmp_file_name = "{$key}.{$extension}";
-    $tmp_fil_post_name = "{$postkey}.{$extension}";
+    $tmp_file_post_name = "{$postkey}.{$extension}";
     $tmp_file_path = "/var/www/html/files/{$tmp_file_name}";
     $tmp_file_post_path = "/var/www/html/files/{$tmp_file_post_name}";
 
