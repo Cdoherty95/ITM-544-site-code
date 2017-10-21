@@ -44,8 +44,8 @@ $sql = "CREATE TABLE IF NOT EXISTS records
 id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 email VARCHAR(32),
 phone VARCHAR(32),
-rurl VARCHAR(32),
-furl VARCHAR(32),
+rurl VARCHAR(255),
+furl VARCHAR(255),
 status INT(1),
 receipt BIGINT
 )";

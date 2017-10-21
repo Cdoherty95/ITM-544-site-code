@@ -57,7 +57,41 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }catch (S3Exception $e){
         die("error uploading". $e);
     }
+    $postkey = md5(uniqid());
 }
+
+
+
+
+require_once 'dbconn.php';
+$dbconnection = new dbconnection();
+$cresdarray = $dbconnection->dbcreds();
+
+$mysqli = new mysqli($cresdarray[0], $cresdarray[1], $cresdarray[2], $cresdarray[3]);
+
+/*prepared statement*/
+$stmt = $mysqli->prepare("INSERT INTO records (email, phone, rurl, furl, status, receipt) VALUES (?,?,?,?,?,?)");
+
+//bind parameters to prepared stmt
+$stmt->bind_param("ssssii", $email, $phone, $rurl, $furl, $status, $receipt);
+
+//var used for testing
+$email = "fd123@g4.com";
+$phone = "h778889999";
+$rurl = "s3.us-east-2.amazonaws.com/itm544s3pre".$key;
+$furl = "s3.us-east-2.amazonaws.com/itm544s3post".$postkey;
+$status = "1";
+$receipt = random_int(1, 999999);
+
+//execute the prepared stmt
+$stmt->execute();
+
+/*for testing purpoes # of rows affected*/
+printf("%d Row inserted.\n", $stmt->affected_rows);
+
+/* close statement and connection */
+$stmt->close();
+$mysqli->close();
 
 
 
