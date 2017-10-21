@@ -48,10 +48,11 @@ foreach ($buckets['Buckets'] as $bucket) {
     echo $bucket['Name'] . "\n";
 }
 
-$rds = new Aws\Rds\RdsClient(['version' => 'latest', 'region' => 'us-east-1']);
-$result = $rds->describeDBInstances(['DBInstanceIdentifier' => $dbIdentifier]);
+$rds = new Aws\Rds\RdsClient(['version' => 'latest', 'region' => 'us-east-2']);
+$result = $rds->describeDBInstances(['DBInstanceIdentifier' =>'itm544dbformp1']);
 $endpoint = $result['DBInstances'][0]['Endpoint']['Address'];
-return $endpoint;
+/*var_dump($endpoint);*/
+var_dump($result);
 
 /*
  * For gallery.php
