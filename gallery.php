@@ -104,7 +104,6 @@ if ($result = mysqli_query($mysqli, $sql)) {
         echo "<th>email</th>";
         echo "<th>phone</th>";
         echo "<th>rurl</th>";
-        echo "<th>furl</th>";
         echo "<th>status</th>";
         echo "<th>receipt</th>";
         echo "</tr>";
@@ -113,8 +112,9 @@ if ($result = mysqli_query($mysqli, $sql)) {
             echo "<td>" . $row['id'] . "</td>";
             echo "<td>" . $row['email'] . "</td>";
             echo "<td>" . $row['phone'] . "</td>";
-            echo "<td>" . $row['rurl'] . "</td>";
-            echo "<td>" . $row['furl'] . "</td>";
+            $alttext = 'image';
+            $address = '<img src="' . $row['rurl'] . '" alt="' . $alttext . '" border=3 height=100 width=100>';
+            echo "<td>" . $address . "</td>";
             echo "<td>" . $row['status'] . "</td>";
             echo "<td>" . $row['receipt'] . "</td>";
             echo "</tr>";

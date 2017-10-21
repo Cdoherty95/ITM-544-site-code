@@ -64,7 +64,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $filename = $tmp_file_path;
     $watermarkfile = $tmp_file_post_path;
 
-
 // Load the stamp and the photo to apply the watermark to
     $stamp = imagecreatefrompng('watermark.png');
     $im = imagecreatefromjpeg($filename);
