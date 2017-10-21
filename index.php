@@ -55,7 +55,8 @@ receipt BIGINT
  * run SQL
  */
 if ($mysqli->query($sql) === TRUE) {
-    echo "Table created successfully";
+    //commented out for display purposes
+    //echo "Table created successfully";
 } else {
     echo "Error creating database: " . $mysqli->error;
 }

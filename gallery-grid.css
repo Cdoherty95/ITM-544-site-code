@@ -14,7 +14,10 @@ body {
     width: 75%;
     margin: auto;
 }
-
+.html{
+    margin: auto;
+    align-content: center;
+}
 .gallery-container h1 {
     text-align: center;
     margin-top: 70px;

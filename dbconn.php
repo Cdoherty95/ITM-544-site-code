@@ -23,24 +23,24 @@ class dbconnection
         if (in_array("itm544s3pre", $bucketnames)) {
             if (in_array("itm544s3post", $bucketnames)) {
                 //NEEDS TO BE REMOVED
-                echo "buckets exist";
+                //echo "buckets exist";
             } else {
                 //pre is present post is not
                 $s3Client->createBucket(array('Bucket' => 'itm544s3post'));
                 //NEEDS TO BE REMOVED
-                echo "bucket itm544s3post was created";
+               // echo "bucket itm544s3post was created";
             }
         } elseif (in_array("itm544s3post", $bucketnames)) {
             //post is present pre is not
             $s3Client->createBucket(array('Bucket' => 'itm544s3pre'));
             //NEEDS TO BE REMOVED
-            echo "bucket itm544s3post was created";
+            //echo "bucket itm544s3post was created";
         } else {
             //creates both buckets if neither exist
             $s3Client->createBucket(array('Bucket' => 'itm544s3pre'));
             $s3Client->createBucket(array('Bucket' => 'itm544s3post'));
             //NEEDS TO BE REMOVED
-            echo "both buckets were created";
+            //echo "both buckets were created";
         }
 
     }
