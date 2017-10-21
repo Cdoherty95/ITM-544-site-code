@@ -54,6 +54,48 @@ $endpoint = $result['DBInstances'][0]['Endpoint']['Address'];
 /*var_dump($endpoint);*/
 var_dump($result);
 
+/*WORKING SHITTTT*/
+require 'vendor/autoload.php';
+use Aws\S3\S3Client;
+use Aws\Exception\AwsException;
+
+//Create a S3Client
+$s3Client = new S3Client([
+    'version' => 'latest',
+    'region'  => 'us-east-2'
+]);
+
+//Listing all S3 Bucket
+$buckets = $s3Client->listBuckets();
+foreach ($buckets['Buckets'] as $bucket) {
+    echo $bucket['Name'] . "\n";
+}
+echo '</br>';
+/*works
+$s3Client->createBucket(array('Bucket' => 'itm544s3pre'));
+
+$s3Client->createBucket(array('Bucket' => 'itm544s3post'));
+*/
+
+$rds = new Aws\Rds\RdsClient(['version' => 'latest', 'region' => 'us-east-2']);
+$result = $rds->describeDBInstances(['DBInstanceIdentifier' => 'itm544dbformp1cd']);
+$endpoint = $result['DBInstances'][0]['Endpoint']['Address'];
+var_dump($endpoint);
+
+echo '</br>';
+
+echo $endpoint;
+
+$e = $endpoint;
+
+echo '</br>';
+echo $e;
+
+
+/*EEND OF WORKING SHIT*/
+
+
+
 /*
  * For gallery.php
 
