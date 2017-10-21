@@ -47,11 +47,15 @@ $buckets = $s3Client->listBuckets();
 foreach ($buckets['Buckets'] as $bucket) {
     echo $bucket['Name'] . "\n";
 }
+$s3Client->createBucket(array('Bucket' => 'itm544s3pre'));
+$s3Client->createBucket(array('Bucket' => 'itm544s3post'));
 
 $rds = new Aws\Rds\RdsClient(['version' => 'latest', 'region' => 'us-east-2']);
-$result = $rds->describeDBInstances(['DBInstanceIdentifier' =>'itm544dbformp1']);
+$result = $rds->describeDBInstances(['DBInstanceIdentifier' => 'itm544dbformp1cd']);
 $endpoint = $result['DBInstances'][0]['Endpoint']['Address'];
-/*var_dump($endpoint);*/
+var_dump($endpoint);
+
+
 var_dump($result);
 
 /*WORKING SHITTTT*/
