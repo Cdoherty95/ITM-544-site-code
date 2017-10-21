@@ -35,6 +35,7 @@ if ($mysqli === false) {
 require_once 'dbconn.php';
 $dbconnection = new dbconnection();
 $cresdarray = $dbconnection->dbcreds();
+$dbconnection->createbuckets();
 
 $mysqli = new mysqli($cresdarray[0], $cresdarray[1], $cresdarray[2], $cresdarray[3]);
 
@@ -61,6 +62,7 @@ if ($mysqli->query($sql) === TRUE) {
 
 /* close connection */
 $mysqli->close();
+
 ?>
 
 <body>

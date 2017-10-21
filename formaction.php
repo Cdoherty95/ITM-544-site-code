@@ -78,8 +78,8 @@ $stmt->bind_param("ssssii", $email, $phone, $rurl, $furl, $status, $receipt);
 //var used for testing
 $email = "fd123@g4.com";
 $phone = "h778889999";
-$rurl = "s3.us-east-2.amazonaws.com/itm544s3pre".$key;
-$furl = "s3.us-east-2.amazonaws.com/itm544s3post".$postkey;
+$rurl = "s3.us-east-2.amazonaws.com/itm544s3pre/".$key;
+$furl = "s3.us-east-2.amazonaws.com/itm544s3post/".$postkey;
 $status = "1";
 $receipt = random_int(1, 999999);
 

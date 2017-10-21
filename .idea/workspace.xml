@@ -35,11 +35,11 @@
         <entry file="file://$PROJECT_DIR$/formaction.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="444">
-              <caret line="81" column="59" selection-start-line="81" selection-start-column="59" selection-end-line="81" selection-end-column="59" />
+              <caret line="81" column="49" selection-start-line="81" selection-start-column="49" selection-end-line="81" selection-end-column="49" />
               <folding>
                 <element signature="e#6#126#0#PHP" expanded="true" />
                 <element signature="e#252#272#0#PHP" expanded="true" />
-                <marker date="1508615833715" expanded="true" signature="1651:1735" ph="INSERT INTO records... " />
+                <marker date="1508617118664" expanded="true" signature="1651:1735" ph="INSERT INTO records... " />
               </folding>
             </state>
           </provider>
@@ -84,8 +84,8 @@
       <file leaf-file-name="gallery.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gallery.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-22">
-              <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+            <state relative-caret-position="308">
+              <caret line="103" column="30" selection-start-line="103" selection-start-column="30" selection-end-line="103" selection-end-column="30" />
               <folding>
                 <marker date="1508609955233" expanded="true" signature="3174:3195" ph="SELECT * FRO... records" />
               </folding>
@@ -106,13 +106,13 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="45" column="18" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
+            <state relative-caret-position="312">
+              <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
               <folding>
                 <element signature="e#617#956#0#PHP" expanded="true" />
-                <marker date="1508615683396" expanded="true" signature="1188:1376" ph="CREATE TABLE... IF" />
-                <marker date="1508615683396" expanded="true" signature="1223:1376" ph="CREATE TABLE... records" />
-                <marker date="1508615683396" expanded="true" signature="1620:1633" ph="..." />
+                <marker date="1508616989127" expanded="true" signature="1220:1408" ph="CREATE TABLE... IF" />
+                <marker date="1508616989127" expanded="true" signature="1255:1408" ph="CREATE TABLE... records" />
+                <marker date="1508616989127" expanded="true" signature="1653:1666" ph="..." />
               </folding>
             </state>
           </provider>
@@ -147,9 +147,9 @@
         <option value="$PROJECT_DIR$/gallery.php" />
         <option value="$PROJECT_DIR$/upload.php" />
         <option value="$PROJECT_DIR$/testing.php" />
-        <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/formaction.php" />
         <option value="$PROJECT_DIR$/notepad.php" />
+        <option value="$PROJECT_DIR$/formaction.php" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -302,12 +302,12 @@
       <workItem from="1508107940001" duration="235000" />
       <workItem from="1508115315768" duration="7461000" />
       <workItem from="1508436380289" duration="19558000" />
-      <workItem from="1508559840945" duration="12389000" />
+      <workItem from="1508559840945" duration="13362000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42451000" />
+    <option name="totallyTimeSpent" value="43424000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -365,7 +365,7 @@
           <folding>
             <element signature="e#6#126#0#PHP" expanded="true" />
             <element signature="e#252#272#0#PHP" expanded="true" />
-            <marker date="1508615833715" expanded="true" signature="1651:1735" ph="INSERT INTO records... " />
+            <marker date="1508617118664" expanded="true" signature="1651:1735" ph="INSERT INTO records... " />
           </folding>
         </state>
       </provider>
@@ -404,9 +404,9 @@
           <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="22" selection-end-column="27" />
           <folding>
             <element signature="e#617#956#0#PHP" expanded="true" />
-            <marker date="1508615683396" expanded="true" signature="1188:1376" ph="CREATE TABLE... IF" />
-            <marker date="1508615683396" expanded="true" signature="1223:1376" ph="CREATE TABLE... records" />
-            <marker date="1508615683396" expanded="true" signature="1620:1633" ph="..." />
+            <marker date="1508616989127" expanded="true" signature="1220:1408" ph="CREATE TABLE... IF" />
+            <marker date="1508616989127" expanded="true" signature="1255:1408" ph="CREATE TABLE... records" />
+            <marker date="1508616989127" expanded="true" signature="1653:1666" ph="..." />
           </folding>
         </state>
       </provider>
@@ -465,7 +465,7 @@
           <folding>
             <element signature="e#6#126#0#PHP" expanded="true" />
             <element signature="e#252#272#0#PHP" expanded="true" />
-            <marker date="1508615833715" expanded="true" signature="1651:1735" ph="INSERT INTO records... " />
+            <marker date="1508617118664" expanded="true" signature="1651:1735" ph="INSERT INTO records... " />
           </folding>
         </state>
       </provider>
@@ -476,9 +476,9 @@
           <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding>
             <element signature="e#617#956#0#PHP" expanded="true" />
-            <marker date="1508615683396" expanded="true" signature="1188:1376" ph="CREATE TABLE... IF" />
-            <marker date="1508615683396" expanded="true" signature="1223:1376" ph="CREATE TABLE... records" />
-            <marker date="1508615683396" expanded="true" signature="1620:1633" ph="..." />
+            <marker date="1508616989127" expanded="true" signature="1220:1408" ph="CREATE TABLE... IF" />
+            <marker date="1508616989127" expanded="true" signature="1255:1408" ph="CREATE TABLE... records" />
+            <marker date="1508616989127" expanded="true" signature="1653:1666" ph="..." />
           </folding>
         </state>
       </provider>
@@ -504,9 +504,9 @@
           <caret line="30" column="6" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
           <folding>
             <element signature="e#617#956#0#PHP" expanded="true" />
-            <marker date="1508615683396" expanded="true" signature="1188:1376" ph="CREATE TABLE... IF" />
-            <marker date="1508615683396" expanded="true" signature="1223:1376" ph="CREATE TABLE... records" />
-            <marker date="1508615683396" expanded="true" signature="1620:1633" ph="..." />
+            <marker date="1508616989127" expanded="true" signature="1220:1408" ph="CREATE TABLE... IF" />
+            <marker date="1508616989127" expanded="true" signature="1255:1408" ph="CREATE TABLE... records" />
+            <marker date="1508616989127" expanded="true" signature="1653:1666" ph="..." />
           </folding>
         </state>
       </provider>
@@ -524,9 +524,9 @@
           <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding>
             <element signature="e#617#956#0#PHP" expanded="true" />
-            <marker date="1508615683396" expanded="true" signature="1188:1376" ph="CREATE TABLE... IF" />
-            <marker date="1508615683396" expanded="true" signature="1223:1376" ph="CREATE TABLE... records" />
-            <marker date="1508615683396" expanded="true" signature="1620:1633" ph="..." />
+            <marker date="1508616989127" expanded="true" signature="1220:1408" ph="CREATE TABLE... IF" />
+            <marker date="1508616989127" expanded="true" signature="1255:1408" ph="CREATE TABLE... records" />
+            <marker date="1508616989127" expanded="true" signature="1653:1666" ph="..." />
           </folding>
         </state>
       </provider>
@@ -609,34 +609,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <marker date="1508604986543" expanded="true" signature="206:227" ph="SELECT * FRO... records" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gallery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-22">
-          <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-          <folding>
-            <marker date="1508609955233" expanded="true" signature="3174:3195" ph="SELECT * FRO... records" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testing.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
@@ -655,6 +627,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <marker date="1508604986543" expanded="true" signature="206:227" ph="SELECT * FRO... records" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/formaction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="81" column="49" selection-start-line="81" selection-start-column="49" selection-end-line="81" selection-end-column="49" />
+          <folding>
+            <element signature="e#6#126#0#PHP" expanded="true" />
+            <element signature="e#252#272#0#PHP" expanded="true" />
+            <marker date="1508617118664" expanded="true" signature="1651:1735" ph="INSERT INTO records... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/dbconn.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="858">
@@ -665,27 +659,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/formaction.php">
+    <entry file="file://$PROJECT_DIR$/gallery.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="81" column="59" selection-start-line="81" selection-start-column="59" selection-end-line="81" selection-end-column="59" />
+        <state relative-caret-position="308">
+          <caret line="103" column="30" selection-start-line="103" selection-start-column="30" selection-end-line="103" selection-end-column="30" />
           <folding>
-            <element signature="e#6#126#0#PHP" expanded="true" />
-            <element signature="e#252#272#0#PHP" expanded="true" />
-            <marker date="1508615833715" expanded="true" signature="1651:1735" ph="INSERT INTO records... " />
+            <marker date="1508609955233" expanded="true" signature="3174:3195" ph="SELECT * FRO... records" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="45" column="18" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
+        <state relative-caret-position="312">
+          <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
           <folding>
             <element signature="e#617#956#0#PHP" expanded="true" />
-            <marker date="1508615683396" expanded="true" signature="1188:1376" ph="CREATE TABLE... IF" />
-            <marker date="1508615683396" expanded="true" signature="1223:1376" ph="CREATE TABLE... records" />
-            <marker date="1508615683396" expanded="true" signature="1620:1633" ph="..." />
+            <marker date="1508616989127" expanded="true" signature="1220:1408" ph="CREATE TABLE... IF" />
+            <marker date="1508616989127" expanded="true" signature="1255:1408" ph="CREATE TABLE... records" />
+            <marker date="1508616989127" expanded="true" signature="1653:1666" ph="..." />
           </folding>
         </state>
       </provider>
