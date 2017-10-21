@@ -6,7 +6,6 @@
  * Time: 10:42 AM
  */
 
-require 'vendor/autoload.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -16,7 +15,7 @@ require 'vendor/autoload.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Freebie: 4 Bootstrap Gallery Templates</title>
+    <title>Chris Doherty Gallery</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
@@ -26,63 +25,14 @@ require 'vendor/autoload.php';
 
 </head>
 <body>
-<div class="container gallery-container">
-
-    <h1>Chris Doherty Project 1 Gallery</h1>
-
-    <p class="page-description text-center">Grid Layout With Zoom Effect</p>
-
-    <div class="tz-gallery">
-
-        <div class="row">
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="../images/park.jpg">
-                    <img src="../images/park.jpg" alt="Park">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="../images/bridge.jpg">
-                    <img src="../images/bridge.jpg" alt="Bridge">
-                </a>
-            </div>
-            <div class="col-sm-12 col-md-4">
-                <a class="lightbox" href="../images/tunnel.jpg">
-                    <img src="../images/tunnel.jpg" alt="Tunnel">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="../images/coast.jpg">
-                    <img src="../images/coast.jpg" alt="Coast">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="../images/rails.jpg">
-                    <img src="../images/rails.jpg" alt="Rails">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="../images/traffic.jpg">
-                    <img src="../images/traffic.jpg" alt="Traffic">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="../images/rocks.jpg">
-                    <img src="../images/rocks.jpg" alt="Rocks">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="../images/benches.jpg">
-                    <img src="../images/benches.jpg" alt="Benches">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="../images/sky.jpg">
-                    <img src="../images/sky.jpg" alt="Sky">
-                </a>
-            </div>
-        </div>
-
-    </div>
+<div class="indxnav">
+    <a href="gallery.php">
+        <button type="button" class="btn first">Gallary Page</button>
+    </a>
+    <a href="upload.php">
+        <button type="button" class="btn second">Upload Images</button>
+    </a>
+</div>
 
 </div>
 <?php
@@ -92,7 +42,6 @@ $dbconnection = new dbconnection();
 $cresdarray = $dbconnection->dbcreds();
 
 $mysqli = new mysqli($cresdarray[0], $cresdarray[1], $cresdarray[2], $cresdarray[3]);
-
 
 // Attempt select query execution
 $sql = "SELECT * FROM records";
@@ -114,7 +63,9 @@ if ($result = mysqli_query($mysqli, $sql)) {
             echo "<td>" . $row['phone'] . "</td>";
             $alttext = 'image';
             $address = '<img src="' . $row['rurl'] . '" alt="' . $alttext . '" border=3 height=100 width=100>';
+            $addresspost = '<img src="' . $row['furl'] . '" alt="' . $alttext . '" border=3 height=100 width=100>';
             echo "<td>" . $address . "</td>";
+            echo "<td>" . $addresspost . "</td>";
             echo "<td>" . $row['status'] . "</td>";
             echo "<td>" . $row['receipt'] . "</td>";
             echo "</tr>";

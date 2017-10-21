@@ -12,6 +12,16 @@
 </head>
 <body>
 
+<div class="indxnav">
+    <a href="gallery.php">
+        <button type="button" class="btn first">Gallary Page</button>
+    </a>
+    <a href="upload.php">
+        <button type="button" class="btn second">Upload Images</button>
+    </a>
+</div>
+</br>
+
 <div class="container gallery-container">
 
     <h1>Upload Images</h1>

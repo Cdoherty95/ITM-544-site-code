@@ -109,8 +109,6 @@ $stmt = $mysqli->prepare("INSERT INTO records (email, phone, rurl, furl, status,
 $stmt->bind_param("ssssii", $email, $phone, $rurl, $furl, $status, $receipt);
 
 //var used for testing
-$email = "fd123@g4.com";
-$phone = "h778889999";
 $rurl = "s3.us-east-2.amazonaws.com/itm544s3pre/".$key;
 $furl = "s3.us-east-2.amazonaws.com/itm544s3post/".$postkey;
 $status = "1";
@@ -127,4 +125,24 @@ $stmt->close();
 $mysqli->close();
 
 ?>
+<body>
 
+<div class="container gallery-container">
+
+    <h1>Welcome To Chris Doherty Project 1</h1>
+
+    <p class="page-description text-center">Choose a destination</p>
+
+    <div class="indxnav">
+        <a href="gallery.php">
+            <button type="button" class="btn first">Gallary Page</button>
+        </a>
+        <a href="upload.php">
+            <button type="button" class="btn second">Upload Images</button>
+        </a>
+    </div>
+
+</div>
+
+</body>
+</html>
