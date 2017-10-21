@@ -17,21 +17,6 @@
 </head>
 <?php
 
-/*creds SHOULDNT NEED
-$servername = "rds.c15xslmyk9xr.us-east-2.rds.amazonaws.com";
-$username = "admin";
-$password = "admin123";
-$dbname = "rds";
-
-$mysqli = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($mysqli === false) {
-    die("ERROR: Could not connect. " . mysqli_connect_error());
-    exit();
-}
-*/
-
 require_once 'dbconn.php';
 $dbconnection = new dbconnection();
 $cresdarray = $dbconnection->dbcreds();
@@ -51,9 +36,6 @@ status INT(1),
 receipt BIGINT
 )";
 
-/***********NEEDS TO BE REMOVED
- * run SQL
- */
 if ($mysqli->query($sql) === TRUE) {
     //commented out for display purposes
     //echo "Table created successfully";
