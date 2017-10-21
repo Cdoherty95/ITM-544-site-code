@@ -73,9 +73,9 @@ class dbconnection
 
 
         //assigning values to array position
-        $credentials[0] = "itm544dbformp1cd.c15xslmyk9xr.us-east-2.rds.amazonaws.com";
+        $credentials[0] = $endpoint;
         $credentials[1] = "itm544class";
-        $credentials[2] = "itm544classpass";
+        $credentials[2] = "itm544pass";
         $credentials[3] = "itm544dbformp1cd";
         //returning array with credentials
         return $credentials;
