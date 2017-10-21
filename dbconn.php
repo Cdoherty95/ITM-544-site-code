@@ -6,7 +6,6 @@ use Aws\Exception\AwsException;
 class dbconnection
 {
     public function createbuckets(){
-
         //Create a S3Client
         $s3Client = new S3Client([
             'version' => 'latest',
@@ -21,26 +20,29 @@ class dbconnection
             $bucketnames[$i] = $bucket['Name'];
             $i++;
         }
-
         if (in_array("itm544s3pre", $bucketnames)) {
             if (in_array("itm544s3post", $bucketnames)) {
+                //NEEDS TO BE REMOVED
                 echo "buckets exist";
-            }else {
+            } else {
                 //pre is present post is not
                 $s3Client->createBucket(array('Bucket' => 'itm544s3post'));
+                //NEEDS TO BE REMOVED
                 echo "bucket itm544s3post was created";
             }
-        }elseif (in_array("itm544s3post", $bucketnames)){
+        } elseif (in_array("itm544s3post", $bucketnames)) {
             //post is present pre is not
             $s3Client->createBucket(array('Bucket' => 'itm544s3pre'));
+            //NEEDS TO BE REMOVED
             echo "bucket itm544s3post was created";
-        }else{
+        } else {
             //creates both buckets if neither exist
             $s3Client->createBucket(array('Bucket' => 'itm544s3pre'));
             $s3Client->createBucket(array('Bucket' => 'itm544s3post'));
             //NEEDS TO BE REMOVED
             echo "both buckets were created";
         }
+
     }
 
     public function openconnection()
