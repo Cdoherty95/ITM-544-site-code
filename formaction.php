@@ -33,8 +33,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     //temp details
     $key = md5(uniqid());
+    $postkey = md5(uniqid());
     $tmp_file_name = "{$key}.{$extension}";
+    $tmp_fil_post_name = "{$postkey}.{$extension}";
     $tmp_file_path = "/var/www/html/files/{$tmp_file_name}";
+    $tmp_file_post_path = "/var/www/html/files/{$tmp_file_post_name}";
 
     //move the file
     move_uploaded_file($tmp_name, $tmp_file_path);
@@ -57,11 +60,45 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }catch (S3Exception $e){
         die("error uploading". $e);
     }
-    $postkey = md5(uniqid());
+
+    $filename = $tmp_file_path;
+    $croppedfile = $tmp_file_post_path;
+
+    $imageSize = getimagesize($filename);
+    $currwidth = $imageSize[0];
+    $currhight = $imageSize[1];
+
+    $left = 0;
+    $top = 0;
+
+    $cropwidth = 700;
+    $cropheight = 400;
+
+    $canvas = imagecreatetruecolor($cropwidth, $cropheight);
+    $currentimage = imagecreatefromjpeg($filename);
+    imagecopy($canvas, $currentimage, 100, 100, $left, $top, $currwidth, $currhight);
+    imagejpeg($canvas, $croppedfile, 100);
+    echo 'Image crop Successful';
+
+    try{
+        $s3Client = new S3Client([
+            'version' => 'latest',
+            'region'  => 'us-east-2'
+        ]);
+        $s3Client->putObject([
+            'Bucket' => 'itm544s3post',
+            'Key' => $postkey,
+            'Body' => fopen($tmp_file_post_path, 'rb'),
+            'ACL' => 'public-read'
+        ]);
+
+        //remove the file from local
+        //unlink($tmp_file_post_path);
+    }catch (S3Exception $e){
+        die("error uploading". $e);
+    }
+
 }
-
-
-
 
 require_once 'dbconn.php';
 $dbconnection = new dbconnection();
