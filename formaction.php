@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //temp details
     $key = md5(uniqid());
     $tmp_file_name = "{$key}.{$extension}";
-    $tmp_file_path = "./{$tmp_file_name}";
+    $tmp_file_path = "/var/www/html/files/{$tmp_file_name}";
 
     //move the file
     move_uploaded_file($tmp_name, $tmp_file_path);
