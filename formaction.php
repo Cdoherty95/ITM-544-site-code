@@ -34,12 +34,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //temp details
     $key = md5(uniqid());
     $tmp_file_name = "{$key}.{$extension}";
-    $tmp_file_path = "files/{$tmp_file_name}";
+    $tmp_file_path = "./{$tmp_file_name}";
 
     //move the file
     move_uploaded_file($tmp_name, $tmp_file_path);
 
-    /*
+
     try{
         $s3Client = new S3Client([
             'version' => 'latest',
@@ -57,7 +57,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }catch (S3Exception $e){
         die("error uploading". $e);
     }
-    */
 }
 
 
