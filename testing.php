@@ -48,6 +48,11 @@ foreach ($buckets['Buckets'] as $bucket) {
     echo $bucket['Name'] . "\n";
 }
 
+$rds = new Aws\Rds\RdsClient(['version' => 'latest', 'region' => 'us-east-1']);
+$result = $rds->describeDBInstances(['DBInstanceIdentifier' => $dbIdentifier]);
+$endpoint = $result['DBInstances'][0]['Endpoint']['Address'];
+return $endpoint;
+
 /*
  * For gallery.php
 
