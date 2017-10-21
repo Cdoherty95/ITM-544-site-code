@@ -47,8 +47,8 @@
       <file leaf-file-name="dbconn.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dbconn.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="78" column="43" selection-start-line="78" selection-start-column="43" selection-end-line="78" selection-end-column="43" />
+            <state relative-caret-position="466">
+              <caret line="75" column="84" selection-start-line="75" selection-start-column="84" selection-end-line="75" selection-end-column="84" />
               <folding>
                 <element signature="e#37#57#0#PHP" expanded="true" />
               </folding>
@@ -105,8 +105,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="44" column="18" selection-start-line="44" selection-start-column="18" selection-end-line="44" selection-end-column="18" />
+            <state relative-caret-position="462">
+              <caret line="49" column="1" selection-start-line="40" selection-start-column="8" selection-end-line="49" selection-end-column="1" />
               <folding>
                 <marker date="1508609135679" expanded="true" signature="1187:1373" ph="CREATE TABLE... IF" />
                 <marker date="1508609135679" expanded="true" signature="1222:1373" ph="CREATE TABLE... records" />
@@ -146,9 +146,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="952" />
-    <option name="width" value="976" />
-    <option name="height" value="1038" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -255,15 +256,15 @@
       <workItem from="1508107940001" duration="235000" />
       <workItem from="1508115315768" duration="7461000" />
       <workItem from="1508436380289" duration="19558000" />
-      <workItem from="1508559840945" duration="6958000" />
+      <workItem from="1508559840945" duration="7094000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37020000" />
+    <option name="totallyTimeSpent" value="37156000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="952" y="0" width="976" height="1038" extended-state="0" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.03809013" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -634,8 +635,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="44" column="18" selection-start-line="44" selection-start-column="18" selection-end-line="44" selection-end-column="18" />
+        <state relative-caret-position="462">
+          <caret line="49" column="1" selection-start-line="40" selection-start-column="8" selection-end-line="49" selection-end-column="1" />
           <folding>
             <marker date="1508609135679" expanded="true" signature="1187:1373" ph="CREATE TABLE... IF" />
             <marker date="1508609135679" expanded="true" signature="1222:1373" ph="CREATE TABLE... records" />
@@ -646,8 +647,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dbconn.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="78" column="43" selection-start-line="78" selection-start-column="43" selection-end-line="78" selection-end-column="43" />
+        <state relative-caret-position="466">
+          <caret line="75" column="84" selection-start-line="75" selection-start-column="84" selection-end-line="75" selection-end-column="84" />
           <folding>
             <element signature="e#37#57#0#PHP" expanded="true" />
           </folding>
