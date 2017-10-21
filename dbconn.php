@@ -62,6 +62,25 @@ class dbconnection
         }
         return $mysqli;
     }
+    public function dbcreds(){
+        //create empty array to store credentials
+        $credentials=array();
+
+        //retrieveing rds hostname
+        $rds = new Aws\Rds\RdsClient(['version' => 'latest', 'region' => 'us-east-2']);
+        $result = $rds->describeDBInstances(['DBInstanceIdentifier' => 'itm544dbformp1cd']);
+        $endpoint = $result['DBInstances'][0]['Endpoint']['Address'];
+
+
+        //assigning values to array position
+        $credentials[0] = $endpoint;
+        $credentials[1] = "admin";
+        $credentials[2] = "admin123";
+        $credentials[3] = "rds";
+        //returning array with credentials
+        return $credentials;
+
+    }
 
 }
  ?>

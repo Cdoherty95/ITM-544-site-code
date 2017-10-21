@@ -102,7 +102,10 @@ if ($mysqli === false) {
 */
 require_once 'dbconn.php';
 $dbconnection = new dbconnection();
-$mysqi = $dbconnection->openconnection();
+$cresdarray = $dbconnection->dbcreds();
+
+$mysqli = new mysqli($cresdarray[0], $cresdarray[1], $cresdarray[2], $cresdarray[3]);
+
 
 // Attempt select query execution
 $sql = "SELECT * FROM records";
