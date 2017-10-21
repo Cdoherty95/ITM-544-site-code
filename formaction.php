@@ -7,6 +7,11 @@
  *
  * require 'vendor/autoload.php';
  */
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 require 'vendor/autoload.php';
 use Aws\S3\S3Client;
 use Aws\S3\Exception\S3Exception;
@@ -34,6 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //move the file
     move_uploaded_file($tmp_name, $tmp_file_path);
 
+    /*
     try{
         $s3Client = new S3Client([
             'version' => 'latest',
@@ -41,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         ]);
         $s3Client->putObject([
             'Bucket' => 'itm544s3pre',
-            'Key' => "uploads/{$key}",
+            'Key' => $key,
             'Body' => fopen($tmp_file_path, 'rb'),
             'ACL' => 'public-read'
         ]);
@@ -51,6 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }catch (S3Exception $e){
         die("error uploading". $e);
     }
+    */
 }
 
 
