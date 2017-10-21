@@ -4,29 +4,7 @@
  * User: Chris
  * Date: 10/15/2017
  * Time: 8:57 PM
- *
- * ?>
- * <html>
- * <head>
- * <title>Creating MySQL Tables</title>
- * </head>
- * <body>
- * <?php
- * $dbhost = 'rds.c15xslmyk9xr.us-east-2.rds.amazonaws.com';
- * $username = "itm544class";
-$password = "itm544pass";
-$dbname = "itm544dbformp1";
- *
- * $conn = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
- * if (!$link) {
- * echo "Error: Unable to connect to MySQL." . PHP_EOL;
- * echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
- * echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
- * exit;
- * }
- * echo 'Connected successfully<br />';
- * mysqli_close($link);
- * ?>
+
  */
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -47,37 +25,9 @@ $buckets = $s3Client->listBuckets();
 foreach ($buckets['Buckets'] as $bucket) {
     echo $bucket['Name'] . "\n";
 }
-$s3Client->createBucket(array('Bucket' => 'itm544s3pre'));
-$s3Client->createBucket(array('Bucket' => 'itm544s3post'));
-
-$rds = new Aws\Rds\RdsClient(['version' => 'latest', 'region' => 'us-east-2']);
-$result = $rds->describeDBInstances(['DBInstanceIdentifier' => 'itm544dbformp1cd']);
-$endpoint = $result['DBInstances'][0]['Endpoint']['Address'];
-var_dump($endpoint);
-
-
-var_dump($result);
-
-/*WORKING SHITTTT*/
-require 'vendor/autoload.php';
-use Aws\S3\S3Client;
-use Aws\Exception\AwsException;
-
-//Create a S3Client
-$s3Client = new S3Client([
-    'version' => 'latest',
-    'region'  => 'us-east-2'
-]);
-
-//Listing all S3 Bucket
-$buckets = $s3Client->listBuckets();
-foreach ($buckets['Buckets'] as $bucket) {
-    echo $bucket['Name'] . "\n";
-}
 echo '</br>';
 /*works
 $s3Client->createBucket(array('Bucket' => 'itm544s3pre'));
-
 $s3Client->createBucket(array('Bucket' => 'itm544s3post'));
 */
 

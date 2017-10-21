@@ -44,12 +44,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dbconn.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dbconn.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dbconn.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-              <folding />
+            <state relative-caret-position="330">
+              <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+              <folding>
+                <element signature="e#37#57#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -66,14 +68,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="testing.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="testing.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testing.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1606">
-              <caret line="73" column="38" selection-start-line="73" selection-start-column="38" selection-end-line="73" selection-end-column="38" />
+            <state relative-caret-position="550">
+              <caret line="31" column="2" selection-start-line="12" selection-start-column="0" selection-end-line="31" selection-end-column="2" />
               <folding>
-                <element signature="e#805#825#0#PHP" expanded="true" />
-                <element signature="e#1547#1567#0#PHP" expanded="true" />
+                <element signature="e#215#235#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -133,6 +134,7 @@
         <option value="$PROJECT_DIR$/formaction.php" />
         <option value="$PROJECT_DIR$/gallery.php" />
         <option value="$PROJECT_DIR$/testing.php" />
+        <option value="$PROJECT_DIR$/dbconn.php" />
       </list>
     </option>
   </component>
@@ -144,8 +146,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="width" value="1932" />
+    <option name="x" value="952" />
+    <option name="width" value="976" />
     <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -190,20 +192,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ITM-544-site-code" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ITM-544-site-code" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ITM-544-site-code" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -284,18 +272,18 @@
       <workItem from="1508107940001" duration="235000" />
       <workItem from="1508115315768" duration="7461000" />
       <workItem from="1508436380289" duration="19558000" />
-      <workItem from="1508559840945" duration="3316000" />
+      <workItem from="1508559840945" duration="4247000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33378000" />
+    <option name="totallyTimeSpent" value="34309000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1932" height="1038" extended-state="0" />
+    <frame x="952" y="0" width="976" height="1038" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.124327235" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.07871397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35220838" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -356,8 +344,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#805#825#0#PHP" expanded="true" />
-            <element signature="e#1547#1567#0#PHP" expanded="true" />
+            <element signature="e#215#235#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -405,8 +392,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#805#825#0#PHP" expanded="true" />
-            <element signature="e#1547#1567#0#PHP" expanded="true" />
+            <element signature="e#215#235#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -595,24 +581,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dbconn.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="26" />
-          <folding>
-            <marker date="1508604986543" expanded="true" signature="206:227" ph="SELECT * FRO... records" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
@@ -654,13 +622,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="26" />
+          <folding>
+            <marker date="1508604986543" expanded="true" signature="206:227" ph="SELECT * FRO... records" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/testing.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1606">
-          <caret line="73" column="38" selection-start-line="73" selection-start-column="38" selection-end-line="73" selection-end-column="38" />
+        <state relative-caret-position="550">
+          <caret line="31" column="2" selection-start-line="12" selection-start-column="0" selection-end-line="31" selection-end-column="2" />
           <folding>
-            <element signature="e#805#825#0#PHP" expanded="true" />
-            <element signature="e#1547#1567#0#PHP" expanded="true" />
+            <element signature="e#215#235#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dbconn.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+          <folding>
+            <element signature="e#37#57#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
