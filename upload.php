@@ -28,7 +28,7 @@
             </div>
             <div class="form_input">
                 <label for="msg">Select image to upload:</label>
-                <input type="file" name="image" id="image">
+                <input type="file" name="image">
             </div>
             <input class="form_input" type="submit" value="Upload Image" name="submit">
         </form>

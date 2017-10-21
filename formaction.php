@@ -7,14 +7,55 @@
  *
  * require 'vendor/autoload.php';
  */
+require 'vendor/autoload.php';
+use Aws\S3\S3Client;
+use Aws\S3\Exception\S3Exception;
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // collect value of input field
     $email = $_POST['email'];
     $phone = $_POST['phone'];
-    $file = $_POST['image'];
+    //changed from _POST??
+    $file = $_FILES['image'];
+
+    //file details
+    $name = $_FILES['image']['name'];
+    $tmp_name = $file['tmp_name'];
+
+    $extension = explode('.', $name);
+    $extension = strtolower(end($extension));
+
+    //temp details
+    $key = md5(uniqid());
+    $tmp_file_name = "{$key}.{$extension}";
+    $tmp_file_path = "files/{$tmp_file_name}";
+
+    //move the file
+    move_uploaded_file($tmp_name, $tmp_file_path);
+
+    try{
+        $s3Client = new S3Client([
+            'version' => 'latest',
+            'region'  => 'us-east-2'
+        ]);
+        $s3Client->putObject([
+            'Bucket' => 'itm544s3pre',
+            'Key' => "uploads/{$key}",
+            'Body' => fopen($tmp_file_path, 'rb'),
+            'ACL' => 'public-read'
+        ]);
+
+        //remove the file from local
+        //unlink($tmp_file_path);
+    }catch (S3Exception $e){
+        die("error uploading". $e);
+    }
 }
+
+
+
+
 /*local directory
 //$target_dir = "uploads/";
 //
@@ -52,35 +93,6 @@ if (isset($_POST["submit"])) {
 }
 */
 
-require_once 'dbconn.php';
-$dbconnection = new dbconnection();
-$cresdarray = $dbconnection->dbcreds();
-
-$mysqli = new mysqli($cresdarray[0], $cresdarray[1], $cresdarray[2], $cresdarray[3]);
-
-/*prepared statement*/
-$stmt = $mysqli->prepare("INSERT INTO records (email, phone, rurl, furl, status, receipt) VALUES (?,?,?,?,?,?)");
-
-//bind parameters to prepared stmt
-$stmt->bind_param("ssssii", $email, $phone, $rurl, $furl, $status, $receipt);
-
-//var used for testing
-$email = "fd123@g4.com";
-$phone = "h778889999";
-$rurl = "cdsdgfdsg.com";
-$furl = "asdfasdfg.com";
-$status = "1";
-$receipt = random_int(1, 999999);
-
-//execute the prepared stmt
-$stmt->execute();
-
-/*for testing purpoes # of rows affected*/
-printf("%d Row inserted.\n", $stmt->affected_rows);
-
-/* close statement and connection */
-$stmt->close();
-$mysqli->close();
 
 /*
 //Need to put redirect to gallery page here with get methods
