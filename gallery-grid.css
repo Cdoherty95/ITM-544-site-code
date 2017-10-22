@@ -4,6 +4,9 @@ body {
     font: normal 16px sans-serif;
     padding: 60px 0;
 }
+#enterhere{
+    order: 1;
+}
 
 .container.gallery-container {
     background-color: #fff;
@@ -15,8 +18,8 @@ body {
     margin: auto;
 }
 .html{
-    margin: auto;
-    align-content: center;
+    display: flex;
+    justify-content: center;
 }
 .gallery-container h1 {
     text-align: center;

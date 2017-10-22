@@ -39,9 +39,9 @@
 
 require_once 'dbconn.php';
 $dbconnection = new dbconnection();
-$cresdarray = $dbconnection->dbcreds();
+$credentials = $dbconnection->dbcreds();
 
-$mysqli = new mysqli($cresdarray[0], $cresdarray[1], $cresdarray[2], $cresdarray[3]);
+$mysqli = new mysqli($credentials[0], $credentials[1], $credentials[2], $credentials[3]);
 
 // Attempt select query execution
 $sql = "SELECT * FROM records";

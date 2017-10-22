@@ -7,11 +7,19 @@
  */
 //crop image with php gd
 
-require_once 'dbconn.php';
-$dbconnection = new dbconnection();
-$cresdarray = $dbconnection->dbcreds();
+//require_once 'dbconn.php';
+//$dbconnection = new dbconnection();
+//$cresdarray = $dbconnection->dbcreds();
+//assigning values to array position
 
-$mysqli = new mysqli($cresdarray[0], $cresdarray[1], $cresdarray[2], $cresdarray[3]);
+$credentials=array();
+
+$credentials[0] = 'itm544dbformp1cd.c15xslmyk9xr.us-east-2.rds.amazonaws.com';
+$credentials[1] = "itm544class";
+$credentials[2] = "itm544pass";
+$credentials[3] = "itm544dbformp1cd";
+
+$mysqli = new mysqli($credentials[0], $credentials[1], $credentials[2], $credentials[3]);
 
 // Attempt select query execution
 $sql = "SELECT * FROM records";
@@ -42,6 +50,7 @@ if ($result = mysqli_query($mysqli, $sql)) {
         }
         echo "</table>";
 
-
+    }
+}
 
 ?>
