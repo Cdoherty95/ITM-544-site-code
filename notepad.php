@@ -7,23 +7,41 @@
  */
 //crop image with php gd
 
-$filename = 'S:\XAMPP\htdocs\ITM-544-site-code\files\95e2a0ea6d84fa3c8a5fe8f2c68ac241.jpg';
+require_once 'dbconn.php';
+$dbconnection = new dbconnection();
+$cresdarray = $dbconnection->dbcreds();
 
-// Load the stamp and the photo to apply the watermark to
-$stamp = imagecreatefrompng('watermark.png');
-$im = imagecreatefromjpeg($filename);
-$watermarkfile = 'S:\XAMPP\htdocs\ITM-544-site-code\files\new1.jpg';
+$mysqli = new mysqli($cresdarray[0], $cresdarray[1], $cresdarray[2], $cresdarray[3]);
 
-// Set the margins for the stamp and get the height/width of the stamp image
-$marge_right = 10;
-$marge_bottom = 10;
-$sx = imagesx($stamp);
-$sy = imagesy($stamp);
+// Attempt select query execution
+$sql = "SELECT * FROM records";
+if ($result = mysqli_query($mysqli, $sql)) {
+    if (mysqli_num_rows($result) > 0) {
+        echo "<table>";
+        echo "<tr>";
+        echo "<th>id</th>";
+        echo "<th>email</th>";
+        echo "<th>phone</th>";
+        echo "<th>rurl</th>";
+        echo "<th>status</th>";
+        echo "<th>receipt</th>";
+        echo "</tr>";
+        while ($row = mysqli_fetch_array($result)) {
+            //$alttext = 'image';
+            //$address = '<img src="' . $row['rurl'] . '" alt="' . $alttext . '" border=3 height=100 width=100>';
+            //$addresspost = '<img src="' . $row['furl'] . '" alt="' . $alttext . '" border=3 height=100 width=100>';
+            echo "<tr>";
+            echo "<td>" . $row['id'] . "</td>";
+            echo "<td>" . $row['email'] . "</td>";
+            echo "<td>" . $row['phone'] . "</td>";
+            echo "<td><img src='" . $row['rurl'] . "' atl='image' border=3 height=100 width=100 </td>";
+            echo "<td><img src='" . $row['furl'] . "' atl='image' border=3 height=100 width=100 </td>";
+            echo "<td>" . $row['status'] . "</td>";
+            echo "<td>" . $row['receipt'] . "</td>";
+            echo "</tr>";
+        }
+        echo "</table>";
 
-// Copy the stamp image onto our photo using the margin offsets and the photo
-// width to calculate positioning of the stamp.
-imagecopy($im, $stamp, imagesx($im) - $sx - $marge_right, imagesy($im) - $sy - $marge_bottom, 0, 0, imagesx($stamp), imagesy($stamp));
-imagejpeg($im, $watermarkfile, 100);
 
 
 ?>
