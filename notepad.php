@@ -47,7 +47,7 @@ if ($result = mysqli_query($mysqli, $sql)) {
             echo "<td>" . $row['phone'] . "</td>";
             echo "<td>" . $row['rurl'] . "</td>";
             echo "<td>" . $row['furl'] . "</td>";
-            echo "<td><img src='" . $row['rurl'] . "' atl='image' border=3 height=100 width=100 /></td>";
+            echo "<td><img src='" . $row['rurl'] . ".jpg' atl='image' border=3 height=100 width=100 /></td>";
             echo "<td><img src='" . $row['furl'] . "' atl='image' border=3 height=100 width=100 /></td>";
             echo "<td>" . $row['status'] . "</td>";
             echo "<td>" . $row['receipt'] . "</td>";
