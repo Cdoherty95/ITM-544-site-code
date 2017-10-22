@@ -47,9 +47,9 @@ $mysqli = new mysqli($credentials[0], $credentials[1], $credentials[2], $credent
 $sql = "SELECT * FROM records";
 if ($result = mysqli_query($mysqli, $sql)) {
     if (mysqli_num_rows($result) > 0) {
-        echo "<div style='display: flex; flex-direction: row; flex-wrap: wrap; width: 75%; margin: auto;'>";
+        echo "<div style='display: flex; flex-direction: row; flex-wrap: wrap; width: 75%; margin-left: 12.5%;'>";
         while ($row = mysqli_fetch_array($result)){
-            echo "<img src='https://" . $row['furl'] . "' atl='image' border=3 height=500 width=500 />";
+            echo "<img src='https://" . $row['rurl'] . "' atl='image' border=3 height=500 width=500 />";
             echo "<img src='https://" . $row['furl'] . "' atl='image' border=3 height=500 width=500 />";
         }
         echo "</div>";
