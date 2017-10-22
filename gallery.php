@@ -47,31 +47,12 @@ $mysqli = new mysqli($credentials[0], $credentials[1], $credentials[2], $credent
 $sql = "SELECT * FROM records";
 if ($result = mysqli_query($mysqli, $sql)) {
     if (mysqli_num_rows($result) > 0) {
-        echo "<table>";
-        echo "<tr>";
-        echo "<th>id</th>";
-        echo "<th>email</th>";
-        echo "<th>phone</th>";
-        echo "<th>rurl</th>";
-        echo "<th>status</th>";
-        echo "<th>receipt</th>";
-        echo "</tr>";
-        while ($row = mysqli_fetch_array($result)) {
-            //$alttext = 'image';
-            //$address = '<img src="' . $row['rurl'] . '" alt="' . $alttext . '" border=3 height=100 width=100>';
-            //$addresspost = '<img src="' . $row['furl'] . '" alt="' . $alttext . '" border=3 height=100 width=100>';
-            echo "<tr>";
-            echo "<td>" . $row['id'] . "</td>";
-            echo "<td>" . $row['email'] . "</td>";
-            echo "<td>" . $row['phone'] . "</td>";
-            echo "<td><img src='" . $row['rurl'] . "' atl='image' border=3 height=100 width=100 </td>";
-            echo "<td><img src='" . $row['furl'] . "' atl='image' border=3 height=100 width=100 </td>";
-            echo "<td>" . $row['status'] . "</td>";
-            echo "<td>" . $row['receipt'] . "</td>";
-            echo "</tr>";
+        echo "<div style='display: flex; flex-direction: row; flex-wrap: wrap; width: 75%; margin: auto;'>";
+        while ($row = mysqli_fetch_array($result)){
+            echo "<img src='https://" . $row['furl'] . "' atl='image' border=3 height=500 width=500 />";
+            echo "<img src='https://" . $row['furl'] . "' atl='image' border=3 height=500 width=500 />";
         }
-        echo "</table>";
-
+        echo "</div>";
 
         // Free result set
         mysqli_free_result($result);
@@ -88,9 +69,5 @@ mysqli_close($mysqli);
 </div>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
-<script>
-    baguetteBox.run('.tz-gallery');
-</script>
 </body>
 </html>
