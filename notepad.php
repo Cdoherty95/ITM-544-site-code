@@ -14,7 +14,7 @@
 
 $credentials=array();
 
-$credentials[0] = 'itm544dbformp1cd.c15xslmyk9xr.us-east-2.rds.amazonaws.com';
+$credentials[0] = "itm544dbformp1cd.c15xslmyk9xr.us-east-2.rds.amazonaws.com";
 $credentials[1] = "itm544class";
 $credentials[2] = "itm544pass";
 $credentials[3] = "itm544dbformp1cd";
@@ -31,6 +31,9 @@ if ($result = mysqli_query($mysqli, $sql)) {
         echo "<th>email</th>";
         echo "<th>phone</th>";
         echo "<th>rurl</th>";
+        echo "<th>furl</th>";
+        echo "<th>rurl</th>";
+        echo "<th>furl</th>";
         echo "<th>status</th>";
         echo "<th>receipt</th>";
         echo "</tr>";
@@ -42,13 +45,18 @@ if ($result = mysqli_query($mysqli, $sql)) {
             echo "<td>" . $row['id'] . "</td>";
             echo "<td>" . $row['email'] . "</td>";
             echo "<td>" . $row['phone'] . "</td>";
-            echo "<td><img src='" . $row['rurl'] . "' atl='image' border=3 height=100 width=100 </td>";
-            echo "<td><img src='" . $row['furl'] . "' atl='image' border=3 height=100 width=100 </td>";
+            echo "<td>" . $row['rurl'] . "</td>";
+            echo "<td>" . $row['furl'] . "</td>";
+            echo "<td><img src='" . $row['rurl'] . "' atl='image' border=3 height=100 width=100 /></td>";
+            echo "<td><img src='" . $row['furl'] . "' atl='image' border=3 height=100 width=100 /></td>";
             echo "<td>" . $row['status'] . "</td>";
             echo "<td>" . $row['receipt'] . "</td>";
             echo "</tr>";
         }
         echo "</table>";
+        while ($row = mysqli_fetch_array($result)) {
+
+        }
 
     }
 }

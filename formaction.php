@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         ]);
         $s3Client->putObject([
             'Bucket' => 'itm544s3pre',
-            'Key' => $key,
+            'Key' => $tmp_file_name,
             'Body' => fopen($tmp_file_path, 'rb'),
             'ACL' => 'public-read'
         ]);
@@ -83,7 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         ]);
         $s3Client->putObject([
             'Bucket' => 'itm544s3post',
-            'Key' => $postkey,
+            'Key' => $tmp_file_post_name,
             'Body' => fopen($tmp_file_post_path, 'rb'),
             'ACL' => 'public-read'
         ]);
@@ -104,7 +104,6 @@ $mysqli = new mysqli($cresdarray[0], $cresdarray[1], $cresdarray[2], $cresdarray
 
 /*prepared statement*/
 if ($stmt = $mysqli->prepare("INSERT INTO records (email, phone, rurl, furl, status, receipt) VALUES (?,?,?,?,?,?)")){
-    printf("Error: %s.\n", $stmt->error);
 
     //bind parameters to prepared stmt
     $stmt->bind_param("ssssii", $email, $phone, $rurl, $furl, $status, $receipt);
@@ -114,12 +113,8 @@ if ($stmt = $mysqli->prepare("INSERT INTO records (email, phone, rurl, furl, sta
     $status = "1";
     $receipt = random_int(1, 999999);
 
-    printf("Error: %s.\n", $stmt->error);
-
     //execute the prepared stmt
     $stmt->execute();
-
-    printf("Error: %s.\n", $stmt->error);
 
 }
 
@@ -129,21 +124,26 @@ if ($stmt = $mysqli->prepare("INSERT INTO records (email, phone, rurl, furl, sta
 
 
 /*for testing purpoes # of rows affected*/
-printf("%d Row inserted.\n", $stmt->affected_rows);
-
+//printf("%d Row inserted.\n", $stmt->affected_rows);
+echo "<h1 style='text-align: center;'>Upload Successful</h1>";
 /* close statement and connection */
 $stmt->close();
 $mysqli->close();
 
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="gallery-grid.css">
+
+    <title>Upload Successful!</title>
+</head>
 <body>
-
 <div class="container gallery-container">
-
-    <h1>Welcome To Chris Doherty Project 1</h1>
-
-    <p class="page-description text-center">Choose a destination</p>
-
+    <h1>Choose A Destination</h1>
     <div class="indxnav">
         <a href="gallery.php">
             <button type="button" class="btn first">Gallary Page</button>
@@ -152,8 +152,6 @@ $mysqli->close();
             <button type="button" class="btn second">Upload Images</button>
         </a>
     </div>
-
 </div>
-
 </body>
 </html>
